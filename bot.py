@@ -12,9 +12,9 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from signal import SIGINT, SIGTERM
 
-import toml
+#import toml
 
-config = toml.load(open("config.toml"))
+#config = toml.load(open("config.toml"))
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -100,12 +100,12 @@ async def on_ready():
 		count.start()
 		started = True
 
-for cogs in config['cogs']:
-	try:
-		bot.load_extension(cogs)
-		print(f'[Loaded] {cogs}')
-	except Exception as e:
-		print(f'[Error] {cogs} | {e}')
+#for cogs in config['cogs']:
+#	try:
+#		bot.load_extension(cogs)
+#		print(f'[Loaded] {cogs}')
+#	except Exception as e:
+#		print(f'[Error] {cogs} | {e}')
 
 
 
