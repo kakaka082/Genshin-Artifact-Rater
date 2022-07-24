@@ -12,9 +12,9 @@ from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from signal import SIGINT, SIGTERM
 
-import toml
+#import toml
 
-config = toml.load(open("config.toml"))
+#config = toml.load(open("config.toml"))
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
